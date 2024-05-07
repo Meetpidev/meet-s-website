@@ -233,10 +233,12 @@ nav {
   font-weight: 600;
   letter-spacing: .1rem;
 }
+
 @media screen and (min-width: 768px) {
   .contact-button {
     display: flex;
   }
+  
 }
 .menu {
   cursor: pointer;
@@ -972,10 +974,14 @@ article {
   cursor: pointer;
   height: 2rem;
 }
+
 @media screen and (max-width: 1033px) {
   .about-details-container{
    position: absolute;
    top: 55rem;
+  }
+  .Card-inner{
+   margin-left: 11rem;
   }
   #experience{
     margin-top: 33rem;
@@ -995,6 +1001,34 @@ article {
   .section__pic-container{
     margin-left: 7rem;
   }
+}
+@media screen and (max-width:720px) {
+  .Card-inner{
+    margin-left: 1rem;
+   }
+  #experience{
+    margin-top: 41rem;
+  }
+  .article-container{
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+  }
+  .about-containers{
+    gap: 1rem;
+  }
+  
+}
+@media screen and (max-width:594px) {
+    #experience {
+      margin-top: 41rem;
+    }
+}
+@media screen and (max-width:590px) {
+  #experience {
+    margin-top: 48rem;
+  }
+
 }
 /******************** Work Styling **************************************/
 .main-title-work {
@@ -1528,3 +1562,48 @@ p {
 .btn-53:hover span:nth-child(6) {
   transition-delay: 0.5s;
 }
+.Card {
+  width: 500px;
+  height: 350px;
+  perspective: 1000px;
+  margin-left:2rem
+}
+
+.Card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.Card:hover .Card-inner {
+  transform: rotateY(180deg);
+}
+
+.Card-front,
+.Card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.Card-front {
+  border-radius: 10px;
+  background-image: url("image_(1)-RqByJi32k-transformed.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: rotateY(0deg);
+}
+
+.Card-back {
+  position: relative;
+  border-radius: 10px;
+  background-image: url("image-CM9Rw2DF8-transformed.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: rotateY(180deg);
+}
+
+
